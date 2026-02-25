@@ -23,12 +23,22 @@ This MCP server exposes **50+ tools** that let Claude:
 - **Python 3.10+**
 - **Claude Desktop** or **Claude Code**
 
-## Installation
+## Quick Install (Recommended)
+
+```bash
+git clone https://github.com/daiemon12/catia-v5-mcp-server.git
+cd catia-v5-mcp-server
+bash setup.sh
+```
+
+The script handles everything: dependencies, Claude Desktop config, and verification.
+
+## Manual Installation
 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/catia-v5-mcp-server.git
+git clone https://github.com/daiemon12/catia-v5-mcp-server.git
 cd catia-v5-mcp-server
 ```
 
