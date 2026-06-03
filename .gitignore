@@ -8,3 +8,17 @@ build/
 .venv/
 venv/
 .env
+
+# Local Claude Code settings (machine-specific, not for sharing)
+.claude/settings.local.json
+
+# CATIA capture / export artifacts
+*.tif
+*.CATPart
+*.CATProduct
+*.CATDrawing
+*.stp
+*.step
+*.igs
+*.iges
+*.stl
