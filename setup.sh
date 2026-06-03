@@ -44,7 +44,7 @@ echo -e "${YELLOW}[2/6] Checking Python...${NC}"
 PYTHON_CMD=""
 for cmd in python python3 py; do
     if command -v $cmd &>/dev/null; then
-        version=$($cmd --version 2>&1 | grep -oP '\d+\.\d+')
+        version=$($cmd --version 2>&1 | grep -oE '[0-9]+\.[0-9]+')
         major=$(echo "$version" | cut -d. -f1)
         minor=$(echo "$version" | cut -d. -f2)
         if [[ "$major" -ge 3 && "$minor" -ge 10 ]]; then

@@ -26,6 +26,7 @@ from catia_mcp.tools.document import DocumentTools
 from catia_mcp.tools.export import ExportTools
 from catia_mcp.tools.measurement import MeasurementTools
 from catia_mcp.tools.part_design import PartDesignTools
+from catia_mcp.tools.scripting import ScriptingTools
 from catia_mcp.tools.sketcher import SketcherTools
 
 # ── Logging ──
@@ -54,6 +55,7 @@ class CATIAMCPServer:
         self.assembly_tools = AssemblyTools(self.connection)
         self.measurement_tools = MeasurementTools(self.connection)
         self.export_tools = ExportTools(self.connection)
+        self.scripting_tools = ScriptingTools(self.connection)
 
         # All tool modules
         self._tool_modules = [
@@ -63,6 +65,7 @@ class CATIAMCPServer:
             self.assembly_tools,
             self.measurement_tools,
             self.export_tools,
+            self.scripting_tools,
         ]
 
         # Build tool name -> module routing table

@@ -19,6 +19,7 @@ def test_imports():
     from catia_mcp.tools.assembly import AssemblyTools
     from catia_mcp.tools.measurement import MeasurementTools
     from catia_mcp.tools.export import ExportTools
+    from catia_mcp.tools.scripting import ScriptingTools
     print("  All modules imported successfully")
 
 
@@ -26,12 +27,13 @@ def test_tool_definitions():
     """Test that all tool modules return valid definitions."""
     print("Testing tool definitions...")
     from catia_mcp.connection import CATIAConnection
-    from catia_mcp.tools.document import DocumentTools
-    from catia_mcp.tools.sketcher import SketcherTools
-    from catia_mcp.tools.part_design import PartDesignTools
     from catia_mcp.tools.assembly import AssemblyTools
-    from catia_mcp.tools.measurement import MeasurementTools
+    from catia_mcp.tools.document import DocumentTools
     from catia_mcp.tools.export import ExportTools
+    from catia_mcp.tools.measurement import MeasurementTools
+    from catia_mcp.tools.part_design import PartDesignTools
+    from catia_mcp.tools.scripting import ScriptingTools
+    from catia_mcp.tools.sketcher import SketcherTools
 
     conn = CATIAConnection()
     modules = {
@@ -41,6 +43,7 @@ def test_tool_definitions():
         "Assembly": AssemblyTools(conn),
         "Measurement": MeasurementTools(conn),
         "Export": ExportTools(conn),
+        "Scripting": ScriptingTools(conn),
     }
 
     total_tools = 0
